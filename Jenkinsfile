@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         AWS_ACCOUNT_ID="933929260845"
-        AWS_DEFAULT_REGION=" us-east-2" 
+        AWS_DEFAULT_REGION="us-east-2" 
         IMAGE_REPO_NAME="jenkis-pipeline"
         IMAGE_TAG="latest"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
