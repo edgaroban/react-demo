@@ -1,6 +1,5 @@
 pipeline {
-    agent label{label 'Jenkins'
-    }
+    agent any
     environment {
         AWS_ACCOUNT_ID="933929260845"
         AWS_DEFAULT_REGION="us-east-2" 
