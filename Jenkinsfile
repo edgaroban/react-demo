@@ -43,13 +43,5 @@ pipeline {
                sh "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}:${IMAGE_TAG}"
          }
      }
-    } 
-
-    //despliegue de ecs
-        stage('Running Build') {
-            steps {
-                echo 'Running in ECS! Success'
-            }
-        }
     }
 }
