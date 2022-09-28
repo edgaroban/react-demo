@@ -8,9 +8,9 @@ pipeline {
         SERVICE_NAME="jenkins-service"
         TASK_DEFINITION_NAME="jenkins-td"
         DESIRED_COUNT="1"
-        IMAGE_TAG="latest"
+        IMAGE_TAG="${env.BUILD_ID}"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
-        registryCredential = "AKIA5S4UFS4W36LLMVXK (integration jenkins & Aws)"
+        registryCredential = "aws-jenkins"
     }
    
     stages {
