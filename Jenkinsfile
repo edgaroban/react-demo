@@ -4,7 +4,6 @@ pipeline {
         AWS_ACCOUNT_ID="933929260845"
         AWS_DEFAULT_REGION="us-east-2" 
         IMAGE_REPO_NAME="933929260845.dkr.ecr.us-east-2.amazonaws.com/jenkis-pipeline"
-        IMAGE_TAG="latest"
         CLUSTER_NAME="ecs-jenkins"
         SERVICE_NAME="jenkins-service"
         TASK_DEFINITION_NAME="jenkins-td"
