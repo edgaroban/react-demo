@@ -60,6 +60,7 @@ pipeline {
                     sh 'pwd'
                     sh 'ls -a'
                     sh 'cat Dockerfile'
+                    sh "chmod +x -R ${env.WORKSPACE}"
 			sh './script.sh'
                 }
             } 
