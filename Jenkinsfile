@@ -34,6 +34,9 @@ pipeline {
     stage('Building image') {
       steps{
         script {
+             sh 'pwd'
+                    sh 'ls -a'
+                    sh 'cat Dockerfile'
             echo "${IMAGE_TAG} version tag" 
           dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}"
         }
