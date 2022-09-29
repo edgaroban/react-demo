@@ -56,6 +56,7 @@ pipeline {
                 script {
                     sh 'pwd'
                     sh 'ls -a'
+                    sh 'cat Dockerfile'
 			sh './script.sh'
                 }
             } 
