@@ -54,6 +54,8 @@ pipeline {
      steps{
             withAWS(credentials: registryCredential, region: "${AWS_DEFAULT_REGION}") {
                 script {
+                    sh 'pwd'
+                    sh 'ls -a'
 			sh './script.sh'
                 }
             } 
