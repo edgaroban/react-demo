@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json /app
 
 # instalar yarn
-RUN apt-get update && apt-get install -y nodejs yarn
+RUN yum install update && yum install -y nodejs yarn
 RUN npm install -g yarn
 
 # Install npm dependencies
