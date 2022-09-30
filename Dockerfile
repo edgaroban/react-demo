@@ -8,7 +8,9 @@ WORKDIR /app
 COPY package.json /app
 
 # instalar yarn
-RUN yum install update && yum install -y nodejs yarn
+ RUN apk add yarn --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ && \
+  yarn install && \
+  apk del yarn
 
 
 # Install npm dependencies
