@@ -49,7 +49,19 @@ pipeline {
          script {
                sh "docker tag ${IMAGE_REPO_NAME}:${IMAGE_TAG} ${REPOSITORY_URI}:$IMAGE_TAG"
                sh "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}:${IMAGE_TAG}"
+               /*sh  docker push 933929260845.dkr.ecr.us-east-2.amazonaws.com/jenkis-pipeline:latest
               //sh "docker push ${IMAGE_REPO_NAME}" 
+               AWS_ACCOUNT_ID="933929260845"
+        AWS_DEFAULT_REGION="us-east-2" 
+        IMAGE_REPO_NAME="jenkis-pipeline"
+        CLUSTER_NAME="ecs-jenkins"
+        SERVICE_NAME="jenkins-service"
+        TASK_DEFINITION_NAME="jenkins-td"
+        DESIRED_COUNT="1"
+        IMAGE_TAG="${env.BUILD_ID}"
+        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
+        registryCredential = "aws-jenkins" */
+    }
          }
      }
     }
