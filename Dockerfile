@@ -1,6 +1,9 @@
 # Using node:16-alpine base image
 FROM node:16-alpine 
 
+# instalar yarn
+RUN npm install -g yarn
+
 # Set /app as the default work directory
 WORKDIR /app
 
