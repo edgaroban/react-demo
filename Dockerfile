@@ -8,13 +8,13 @@ WORKDIR /app
 COPY package.json /app
 
 # instalar yarn
- RUN apk add yarn --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ && \
-  yarn install && \
-  apk del yarn
+## RUN apk add yarn --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community/ && \
+  ##yarn install && \
+  ##apk del yarn
 
 
 # Install npm dependencies
-RUN yarn install
+RUN npm install
 
 # Copy all the project files to the working directory
 COPY . .
@@ -23,4 +23,4 @@ COPY . .
 EXPOSE 3000
 
 # run your app
-CMD ['yarn', 'run', 'start']
+CMD ['npm', 'start']
