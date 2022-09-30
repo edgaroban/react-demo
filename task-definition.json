@@ -4,7 +4,7 @@
     "containerDefinitions": [
         {
             "name": "ecs-jenkins",
-            "image": "{{image}}",
+            "image": "933929260845.dkr.ecr.us-east-2.amazonaws.com/jenkis-pipeline:latest",
             "portMappings": [
                 {
                     "containerPort": 3000,
